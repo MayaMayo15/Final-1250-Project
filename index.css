@@ -1,0 +1,827 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Ubuntu, sans-serif;
+    line-height: 1.6;
+    color: #726e6e;
+    background-color: #0C0C0C;
+}
+
+
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0C0C0C;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+
+.textwhite {
+    color: #DADADA;
+}
+
+
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+
+.nav-right a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 2rem;
+    font-weight: 500;
+}
+
+
+
+.nav-right a:hover {
+    color: #666;
+}
+
+
+
+.container {
+    margin-top: 80px;
+}
+
+
+
+/* Hero Section */
+.hero {
+    height: 665px;
+    padding: 3rem 2rem;
+    background-color: #0C0C0C;
+    background-image: radial-gradient(ellipse at 50%, #928794 0%, #4E2D63 40%, #110A16 65%, #0C0C0C 70%);
+    text-align: center;
+    border: 5px solid #0C0C0C;
+}
+
+
+
+.hero h1 {
+    font-size: 5rem;
+    padding-top: 15%;
+    justify-content: center;
+    vertical-align: middle;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+
+
+/* Two Column Layout */
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    min-height: 500px;
+}
+
+
+
+/* Left Column - Photo */
+.column-left {
+    flex: 1;
+    background-color: #0C0C0C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    position: relative;
+}
+
+
+
+ .column-left2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* optional, adds space between Neck and Neck2 */
+}
+
+
+
+.column-features {
+    flex: 1;
+    background-color: #0C0C0C;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;  /* Adds consistent spacing between items */
+    padding: 3rem;
+}
+
+
+
+
+.photo {
+    height: 560px;
+    width: 560px;
+    border-radius: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.column-left::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle at center, #928794 55%, #4E2D63 70%, #0C0C0C 50%);
+    border-radius: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(15px);
+}
+
+
+
+
+/* .photo h1 {
+    font-size: 3rem;
+    font-weight: 300;
+} */
+
+
+
+/* Right Column - 5W1H */
+.column-right {
+    flex: 2;
+    background-color: #0C0C0C;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3rem;
+}
+
+
+
+.five-w-section {
+    width: 100%;
+    max-width: 800px;
+}
+
+
+
+
+/* 5W Header - No Background */
+.five-w-header {
+    margin-bottom: 2rem;
+    padding: 0;
+    text-align: left;
+}
+
+
+
+.five-w-header h2 {
+    color: #DADADA;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+
+
+/* 5W Content */
+.five-w-content {
+    color: #DADADA;
+    padding: 0;
+    text-align: left;
+}
+
+
+.five-w-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+
+.five-w-content strong {
+    font-weight: 700;
+    color: #DADADA;
+}
+
+
+
+.padding_top {
+    padding-top: 4rem;
+}
+
+
+
+.threebottompadding {
+    padding-bottom: 4rem;
+}
+
+
+
+/* Four Column Section with Dividers */
+.four-column-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 95%;
+    background-color: #0C0C0C;
+
+
+
+}
+
+
+
+.column-pair {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2rem;
+    padding-right: 1rem;
+}
+
+
+
+
+.column-title {
+    flex: 0 0 33.33%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+
+
+.column-title h2 {
+    color: #DADADA;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0;
+    text-align: right;
+}
+
+
+
+.column-content {
+    flex: 0 0 66.67%;
+    padding-left: 2rem;
+    padding-top: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+
+
+.column-content p {
+    color: #DADADA;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+
+
+.column-content::before {
+    content: '';
+    position: absolute;
+    left: -3px;
+    width: 4.5px;
+    height: 210px;
+    background: #674D79;
+    border-radius: 3px 2px 3px 2px;
+
+}
+
+
+
+
+
+/* Ideation Section */
+.ideation-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    min-height: 500px;
+    margin-top: 10rem;
+}
+
+
+
+/* Left Column - Text Content */
+.proposal-text {
+    flex: 0 0 50%;
+    background-color: #0C0C0C;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+
+.proposal-section {
+    width: 100%;
+    max-width: 800px;
+}
+
+
+
+/* Proposal Title (Large - Hero Style) */
+.proposal-title {
+    margin-bottom: 1rem;
+    padding: 0;
+    text-align: left;
+}
+
+
+
+.proposal-title h1 {
+    color: #DADADA;
+    font-size: 5rem;
+    font-weight: 1000;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1.1;
+}
+
+
+
+
+/* Proposal Header (Medium - Neck Style) */
+.proposal-header {
+    margin-bottom: 2rem;
+    padding: 0;
+    text-align: left;
+}
+
+
+.proposal-header a {
+    color: #DADADA;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+
+.proposal-header a:hover {
+    color: #928794;
+}
+
+
+.proposal-header h2 {
+    color: #DADADA;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+
+
+/* Proposal Content Text */
+.proposal-content {
+    color: #DADADA;
+    padding: 0;
+    text-align: left;
+}
+
+
+
+.proposal-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+
+/* Right Column - Photo (Full Image, Contained) */
+.column-right-image {
+    flex: 0 0 50%;
+    background-color: #0C0C0C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    padding-left: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+
+.photo-full {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+
+
+
+/* Process Work Section */
+.process-section {
+    width: 100%;
+    background-color: #0C0C0C;
+    padding: 4rem 3rem;
+    margin-top: 1rem;
+}
+
+
+
+/* Process Work Title with Line */
+.process-title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+
+
+
+.process-title-container h1 {
+    color: #DADADA;
+    font-size: 5rem;
+    font-weight: 1000;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 0.9;
+    white-space: nowrap;
+}
+
+
+
+.process-line {
+    flex: 1;
+    height: 6px;
+    background-color: #674D79;
+    position: relative;
+    border-radius: 3px 2px 3px 2px;
+
+
+
+}
+
+
+
+.process-line::after {
+    content: '→';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-62.5px);
+    color: #674D79;
+    font-size: 5rem;
+}
+
+
+
+/* Process Content Container */
+.process-content-wrapper {
+    max-width: 100%;
+}
+
+
+
+/* Process Header */
+.process-header {
+    margin-bottom: 2rem;
+    padding: 0;
+    text-align: left;
+}
+
+
+
+.process-header h2 {
+    color: #DADADA;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+
+
+/* Process Content */
+.process-content {
+    color: #DADADA;
+    padding: 0;
+    text-align: left;
+}
+
+
+
+.process-content p {
+    font-size: 1.2rem;
+    line-height: 2;
+    text-align: justify;
+}
+
+
+
+.process-content strong {
+    font-weight: 700;
+    color: #DADADA;
+}
+
+
+
+/* Storyboards Section */
+.storyboards-section {
+    width: 100%;
+    background-color: #0C0C0C;
+    padding: 4rem 3rem 3rem 3rem;
+    margin-top: 0;
+}
+
+
+.storyboards-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+
+.storyboards-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    background-color: #0C0C0C;
+    box-sizing: border-box;
+    aspect-ratio: 16 / 9;
+}
+
+
+.storyboard-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0C0C0C;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.storyboard-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* Fictional Value Section */
+.fictional-value-section {
+    width: 100%;
+    background-color: #0C0C0C;
+    padding: 4rem 3rem;
+    margin-top: 0rem;
+}
+
+.fictional-value-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    width: 100%;
+}
+
+.fictional-value-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.fictional-value-header {
+    margin-bottom: 2rem;
+    padding: 0;
+    text-align: left;
+}
+
+.fictional-value-header h2 {
+    color: #DADADA;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.fictional-value-content {
+    color: #DADADA;
+    padding: 0;
+    text-align: left;
+}
+
+.fictional-value-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+
+    text-align: justify;
+}
+
+.fictional-value-content strong {
+    font-weight: 700;
+    color: #DADADA;
+}
+
+
+/* Prototype Section */
+.prototype-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    min-height: 500px;
+    padding-top: 0rem;
+}
+
+/* Prototype Text Content */
+.prototype-text {
+    flex: 0 0 50%;
+    background-color: #0C0C0C;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 3rem;
+    padding-right: 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.prototype-text-section {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Prototype Header */
+.prototype-header {
+    margin-bottom: 2rem;
+    padding: 0;
+    text-align: left;
+}
+
+.prototype-header h2 {
+    color: #DADADA;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Prototype Content Text */
+.prototype-content {
+    color: #DADADA;
+    padding-bottom: rem;
+    text-align: left;
+}
+
+.prototype-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+/* Prototype Image */
+.prototype-image {
+    flex: 0 0 50%;
+    background-color: #0C0C0C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem;
+    padding-left: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.prototype-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+/* Prototype 2 - Image Left, Text Right (Shifted Right) */
+.prototype-section.prototype-2 {
+    margin-left: 0.1rem;
+}
+
+.prototype-section.prototype-2 .prototype-image {
+    padding-left: 3rem;
+    padding-right: 0;
+}
+
+.prototype-section.prototype-2 .prototype-text {
+    padding-left: 1.5rem;
+
+}
+
+
+/* Concept Statement Section */
+.concept-statement-section {
+    width: 100%;
+    background-color: #0C0C0C;
+    padding: 5rem;
+    margin-top: 0;
+}
+
+.concept-statement-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Concept Statement Title */
+.concept-statement-title {
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.concept-statement-title h1 {
+    color: #DADADA;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Concept Statement Content */
+.concept-statement-content {
+    color: #DADADA;
+    text-align: center;
+}
+
+.concept-statement-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-flex {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .column-left,
+    .column-right {
+        padding: 2rem;
+    }
+    
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .nav-right a {
+        margin-left: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .five-w-header h2 {
+        font-size: 1.5rem;
+    }
+}
